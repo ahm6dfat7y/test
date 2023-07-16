@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <form>
+            <div class="mb-4">
+                <label for="productName">product Name</label>
+                <input id="productName" type="text" class="form-control mt-2" />
+            </div>
+            <div class="mb-4">
+                <label for="productPrice">product Price</label>
+                <input id="productPrice" type="number" class="form-control mt-2" />
+            </div>
+            <div class="mb-4">
+                <label for="productCategory">product Category</label>
+
+                <select class="form-select mt-2" id="productCategory">
+                    <option disabled selected >Choose Category</option>
+                    <option value="tv">TV</option>
+                    <option value="mobile">mobile</option>
+                    <option value="labtop">Labtop</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="productDescription">product Description</label>
+
+                <textarea id="productDescription" class="form-control"></textarea>
+            </div>
+
+            <button onclick="addProduct()" type="button" class="btn btn-outline-primary">Add Product</button>
+            <button type="button" class="btn btn-outline-danger">clear Form</button>
+        </form>
+
+        <input onkeyup="search()" id="searchInput" class="form-control border-danger w-50 mx-auto my-5" placeholder="Search Name and Category ........." />
+
+
+        <table class="table table-dark table-hover table-bordered  text-center table-striped">
+            <thead>
+                <th>Index</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableData">
+
+                <!-- <tr>
+                    <td>0</td>
+                    <td>Nokia</td>
+                    <td>50000</td>
+                    <td>Mobile</td>
+                    <td>Goood</td>
+                    <td>
+                        <button onclick="addProduct()" class="btn btn-outline-warning">Update</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline-danger">Delete</button>
+                    </td>
+                </tr> -->
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
